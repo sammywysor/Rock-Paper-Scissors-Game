@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff8a65, #ff2e63);
+    animation: changeColors 10s infinite alternate;
+  }
+  
+  #game {
+    text-align: center;
+  }
+  
+  .gameText {
+    color: #fff;
+  }
+  
+  .choiceBtn {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .choiceBtn:hover {
+    background-color: #45a049;
+  }
+  
+  #result.celebrate {
+    color: #fdd835;
+    animation: celebrate 0.5s ease-in-out;
+  }
+  
+  #result.sad {
+    color: #ef5350;
+    animation: sad 0.5s ease-in-out;
+  }
+  
+  @keyframes changeColors {
+    0% {
+      background: linear-gradient(to right, #ff8a65, #ff2e63);
+    }
+    50% {
+      background: linear-gradient(to right, #81c784, #aed581);
+    }
+    100% {
+      background: linear-gradient(to right, #ff8a65, #ff2e63);
+    }
+  }
+  
+  @keyframes celebrate {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+  
+  @keyframes sad {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+  }
+  
